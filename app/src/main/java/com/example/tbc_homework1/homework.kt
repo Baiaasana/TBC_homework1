@@ -12,18 +12,22 @@ fun main() {
 }
 
 fun sum() {
-
-    print("Enter the first number: ")
-    val x: Int = readLine()!!.toInt()
-    print("Enter the second number: ")
-    val y: Int = readLine()!!.toInt()
-    val z = x + y
-    println("   $x + $y = $z")
-    print("Do you want calculate again? (yes or no): ")
-    when (readLine()!!) {
-        "yes", "Yes" -> return sum()
-        "no", "No" -> print("Calculate is over.")
-        else -> println("Enter the yes or no!")
+    try{
+        print("Enter the first number: ")
+        val x: Int = readLine()!!.toInt()
+        print("Enter the second number: ")
+        val y: Int = readLine()!!.toInt()
+        val z = x + y
+        println("   $x + $y = $z")
+        print("Do you want calculate again? (yes or no): ")
+        when (readLine()!!) {
+            "yes", "Yes" -> return sum()
+            "no", "No" -> print("Calculate is over.")
+            else -> println("Enter the yes or no!")
+        }
+    }
+    catch (e: NumberFormatException){
+        println("Enter an integer in number field!")
     }
 }
 
