@@ -28,7 +28,6 @@ fun sum() {
         "no", "No" -> print("Calculate is over.")
         else -> println("Enter the yes or no!")
     }
-
 }
 
 
